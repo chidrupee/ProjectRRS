@@ -1,0 +1,256 @@
+{
+    "Python": [
+        "Python",
+        "Django",
+        "Flask",
+        "Pandas",
+        "NumPy",
+        "SciPy",
+        "TensorFlow",
+        "PyTorch"
+    ],
+    "Java": [
+        "Java",
+        "Spring",
+        "Hibernate",
+        "Maven",
+        "JSP",
+        "JavaFX"
+    ],
+    "Cplusplus": [
+        "Cplusplus",
+        "STL",
+        "Cpp",
+        "Object Oriented programming in cplusplus"
+    ],
+    "JavaScript": [
+        "JavaScript",
+        "Node.js",
+        "Node",
+        "JS",
+        "React",
+        "Angular",
+        "Vue.js",
+        "jQuery",
+        "TypeScript",
+        "ES6",
+        "Async JS",
+        "Promises",
+        "DOM Manipulation"
+    ],
+    "HTML": [
+        "HTML",
+        "HTML5",
+        "Semantic HTML",
+        "Web Accessibility",
+        "Canvas",
+        "SVG"
+    ],
+    "CSS": [
+        "CSS",
+        "CSS3",
+        "Flexbox",
+        "Grid",
+        "Sass",
+        "LESS",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Responsive Design"
+    ],
+    "R": [
+        "R",
+        "Shiny",
+        "ggplot2",
+        "dplyr",
+        "tidyverse"
+    ],
+    "C": [
+        "C",
+        "Embedded C",
+        "ANSI C",
+        "C programming",
+        "Procedural",
+        "ANSI"
+    ],
+    "Csharp": [
+        "Csharp",
+        "ASP.NET",
+        ".NET Core",
+        "Unity",
+        "Xamarin"
+    ],
+    "Rust": [
+        "Rust",
+        "Cargo",
+        "WebAssembly"
+    ],
+    "TypeScript": [
+        "TypeScript",
+        "Angular",
+        "React",
+        "Node.js"
+    ],
+    "Ruby": [
+        "Ruby",
+        "Ruby on Rails",
+        "Sinatra"
+    ],
+    "Computernetworks": [
+        "CN",
+        "TCP/IP",
+        "TCP",
+        "IP",
+        "Networking",
+        "Computer Networks",
+        "Computer Network"
+    ],
+    "Programming": [
+        "Programming",
+        "Software Development"
+    ],
+    "MachineLearning": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "Data Mining",
+        "AI Ethics",
+        "Neural Networks",
+        "AI",
+        "TensorFlow",
+        "PyTorch",
+        "Neural Networks",
+        "SVD",
+        "SVM",
+        "Regression",
+        "Logistic Regression",
+        "Linear Regression",
+        "Model Training",
+        "Confusion matrix",
+        "Artificial Intelligence"
+    ],
+    "DataScience": [
+        "Data Analysis",
+        "Data Visualization",
+        "Data Engineering",
+        "Big Data",
+        "Statistics",
+        "Data Warehousing",
+        "ETL",
+        "Predictive Analytics",
+        "Data Science",
+        "Apache Spark",
+        "Data Mining"
+    ],
+    "SoftwareEngineering": [
+        "Software Engineering",
+        "Agile Development",
+        "DevOps",
+        "Software Testing",
+        "Version Control",
+        "Continuous Integration",
+        "Microservices",
+        "Selenium",
+        "Agile",
+        "Software",
+        "Software Design"
+    ],
+    "WebDevelopment": [
+        "Front-End Development",
+        "Back-End Development",
+        "Full-Stack Development",
+        "PHP",
+        "Node.js",
+        "Web Security",
+        "Web Optimization"
+    ],
+    "Database": [
+        "SQL",
+        "NoSQL",
+        "Database Design",
+        "Data Modeling",
+        "Database Administration",
+        "Graph Databases",
+        "MongoDB",
+        "Database",
+        "Databases",
+        "Hadoop",
+        "Oracle",
+        "PL/SQL",
+        "MySQL"
+    ],
+    "Cybersecurity": [
+        "Network Protocols",
+        "Network Security",
+        "Cybersecurity",
+        "Cryptography",
+        "Ethical Hacking",
+        "Cloud Security",
+        "Firewalls",
+        "Blockchain",
+        "Hacking"
+    ],
+    "CloudComputing": [
+        "Cloud Architecture",
+        "AWS",
+        "Azure",
+        "Google Cloud Platform",
+        "Serverless Computing",
+        "Kubernetes",
+        "Docker",
+        "Cloud Migration"
+    ],
+    "OperatingSystems": [
+        "Linux",
+        "Unix",
+        "Windows",
+        "MacOS",
+        "Kernel Development",
+        "System Administration",
+        "OS",
+        "Operating systems",
+        "Shell Scripting",
+        "Operating"
+    ],
+    "DataStructuresAlgorithms": [
+        "Algorithms",
+        "Data Structures",
+        "Computational Complexity",
+        "Automata Theory",
+        "Graph Theory",
+        "Quantum Computing"
+    ],
+    "IoT": [
+        "Internet of Things",
+        "Connected Devices",
+        "Smart Systems",
+        "Embedded Systems",
+        "Sensor Networks",
+        "Edge Computing"
+    ],
+    "ComputerArchitectures": [
+        "Digital Design",
+        "Computer Architecture",
+        "x86",
+        "8086",
+        "8085",
+        "8051",
+        "ARM",
+        "MIPS",
+        "RISC-V",
+        "PowerPC",
+        "SPARC",
+        "Assembly"
+    ],
+    "Microprocessors": [
+        "Intel Core",
+        "AMD Ryzen",
+        "Microprocessors",
+        "Microprocessor",
+        "ARM Cortex",
+        "Qualcomm Snapdragon",
+        "Apple M1",
+        "NVIDIA Tegra"
+    ]
+}

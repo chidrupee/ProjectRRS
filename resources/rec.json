@@ -1,0 +1,154 @@
+[
+ {
+  "Title": "Python",
+  "Index": 3564,
+  "Author": "Maurice J. Thompson",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Programming with Python",
+  "Index": 7061,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python Pocket Reference, 2nd Edition",
+  "Index": 6434,
+  "Author": "Mark Lutz",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Beginning Python",
+  "Index": 6744,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python Algorithms: Mastering Basic Algorithms in the Python Language",
+  "Index": 8066,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, datastructuresalgorithms",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Pro Python",
+  "Index": 8175,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python Programming Fundamentals",
+  "Index": 7698,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "The Quick Python Book",
+  "Index": 4948,
+  "Author": "Naomi R. Ceder",
+  "Count": 1,
+  "Categories": "python, programming, machinelearning, softwareengineering",
+  "Rating": 4.24
+ },
+ {
+  "Title": "An Introduction to Python and Computer Programming",
+  "Index": 7123,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Learn to Program with Python",
+  "Index": 7006,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Numerical Python",
+  "Index": 7241,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python for Data Analysis",
+  "Index": 3457,
+  "Author": "Wes McKinney",
+  "Count": 1,
+  "Categories": "python, datascience",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python 3",
+  "Index": 3510,
+  "Author": "Johannes Ernesti",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python in a Nutshell",
+  "Index": 6433,
+  "Author": "Alex Martelli",
+  "Count": 1,
+  "Categories": "python, java, C++, C#, programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python 2 and 3 Compatibility",
+  "Index": 6723,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "The Python Workbook",
+  "Index": 7414,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Data Structures and Algorithms with Python",
+  "Index": 7192,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, datastructuresalgorithms",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python Programming Books Set: Python Programming for Beginners & Complete Guide for Python Programming",
+  "Index": 8861,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming, datastructuresalgorithms",
+  "Rating": 4.0
+ },
+ {
+  "Title": "Python Programming For Beginners: Quick And Easy Guide For Python Programmers",
+  "Index": 8881,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming, datastructuresalgorithms",
+  "Rating": 3.91
+ }
+]
