@@ -1,154 +1,154 @@
 [
  {
-  "Title": "Introduction To: Database Systems",
-  "Index": 3049,
-  "Author": "Date, C.J.",
+  "Title": "C And Unix - Tools For Software Design",
+  "Index": 303,
+  "Author": "Barrett M L",
+  "Count": 8,
+  "Categories": "softwareengineering, operatingsystems",
+  "Rating": 4.99
+ },
+ {
+  "Title": "Unix Network Programming .",
+  "Index": 445,
+  "Author": "W Richard Stevens",
+  "Count": 1,
+  "Categories": "programming, operatingsystems",
+  "Rating": 4.79
+ },
+ {
+  "Title": "Unix And Linux Systems",
+  "Index": 2155,
+  "Author": "Nemeth, E.",
   "Count": 5,
-  "Categories": "database",
-  "Rating": 4.88
+  "Categories": "operatingsystems",
+  "Rating": 4.75
  },
  {
-  "Title": "Database Theory ",
-  "Index": 8312,
+  "Title": "Unix System V 4",
+  "Index": 2479,
+  "Author": "Dass.",
+  "Count": 1,
+  "Categories": "operatingsystems",
+  "Rating": 4.42
+ },
+ {
+  "Title": "UNIX Filesystems: Evolution, Design, and Implementation (Veritas)",
+  "Index": 4430,
+  "Author": "Steve D. Pate",
+  "Count": 1,
+  "Categories": "programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "UNIX Operating System",
+  "Index": 8174,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "operatingsystems",
   "Rating": 4.24
  },
  {
-  "Title": "Database Programming Languages",
-  "Index": 7310,
+  "Title": "UNIX Unbounded: A Beginning Approach (3rd Edition)",
+  "Index": 4223,
+  "Author": "Amir Afzal",
+  "Count": 1,
+  "Categories": "operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "UNIX for Dummies Quick Reference",
+  "Index": 4439,
+  "Author": "Margaret Levine Young, John R. Levine",
+  "Count": 1,
+  "Categories": "computernetworks, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Advanced UNIX Programming (2nd Edition)",
+  "Index": 4264,
+  "Author": "Marc J. Rochkind",
+  "Count": 1,
+  "Categories": "computernetworks, programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Digital UNIX System Administrators Guide (HP Technologies)",
+  "Index": 4210,
+  "Author": "Matthew Cheek, Scott Fafrak, Steven Hancock, Martin Moore, Gregory Yates",
+  "Count": 1,
+  "Categories": "operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Special Edition Using Unix (3rd Edition)",
+  "Index": 6003,
+  "Author": "Shelley Powers, Jerry Peek, \"Tim OReilly\", Mike Loukides, Michael Kosta Loukides",
+  "Count": 1,
+  "Categories": "python, programming, softwareengineering, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Linux Power Tools",
+  "Index": 5809,
+  "Author": "Shelley Powers, Jerry Peek, \"Tim OReilly\", Mike Loukides, Michael Kosta Loukides",
+  "Count": 1,
+  "Categories": "python, programming, softwareengineering, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Unix Secrets",
+  "Index": 3805,
+  "Author": "James C. Armstrong, James C. Armstrong (Jr.)",
+  "Count": 1,
+  "Categories": "operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Unix for MAC OS X.",
+  "Index": 4057,
+  "Author": "Mark G. Sobell, Peter Seebach",
+  "Count": 1,
+  "Categories": "computernetworks, programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Advanced C/UNIX",
+  "Index": 6005,
+  "Author": "W. Richard Stevens, Stephen A. Rago",
+  "Count": 1,
+  "Categories": "programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Automating Linux and Unix System Administration",
+  "Index": 8375,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "programming, database",
+  "Categories": "operatingsystems",
   "Rating": 4.24
  },
  {
-  "Title": "Beginning Database Design",
-  "Index": 7937,
-  "Author": "unknown",
+  "Title": "Introduction to UNIX",
+  "Index": 6415,
+  "Author": "Jerry Peek, Grace Todino, John Strang",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "operatingsystems",
   "Rating": 4.24
  },
  {
-  "Title": "Database Theory and Application",
-  "Index": 7477,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
+  "Title": "Unix: Concepts & Application",
+  "Index": 3090,
+  "Author": "Das, S.",
+  "Count": 20,
+  "Categories": "operatingsystems",
+  "Rating": 4.21
  },
  {
-  "Title": "Database Systems for Advanced Applications",
-  "Index": 6528,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Relational Database Programming",
-  "Index": 7078,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "programming, database",
-  "Rating": 4.24
- },
- {
-  "Title": "Database and Expert Systems Applications",
-  "Index": 6604,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Handbook of Database Security",
-  "Index": 8571,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Database and XML Technologies",
-  "Index": 7346,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Intelligent Information and Database Systems",
-  "Index": 6581,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Database Design and Development: An Essential Guide for IT Professionals",
-  "Index": 6321,
-  "Author": "Paulraj Ponniah",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Expert Oracle Database Architecture",
-  "Index": 8707,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "An Introduction to Database Systems (v. 1)",
-  "Index": 5006,
-  "Author": "Hector Garcia-Molina, Jeffrey D. Ullman, Jennifer Widom",
-  "Count": 1,
-  "Categories": "programming, database",
-  "Rating": 4.24
- },
- {
-  "Title": "Encyclopedia of Database Systems",
-  "Index": 8814,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Secrets of the Oracle Database",
-  "Index": 8378,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Oracle Database 11g",
-  "Index": 8596,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "An Introduction to Database Systems",
-  "Index": 4087,
-  "Author": "C. J. Date, C. J.. Date",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Applied Mathematics for Database Professionals",
-  "Index": 8204,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
+  "Title": "Advanced Programming The Unix Environment",
+  "Index": 3285,
+  "Author": "Stevens Richard W.",
+  "Count": 2,
+  "Categories": "programming, operatingsystems",
+  "Rating": 3.56
  }
 ]
