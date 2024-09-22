@@ -16,6 +16,9 @@ export default function Sidebar({ isOpen, onClose }) {
         router.push('/landing');
         
     }
+    const routeHome = () =>{
+        router.push('/home');
+    }
     return (
         // <div className={`sidebar ${isOpen ? "open" : ""} p-24 `}>
         //   <div className={`sidebar fixed top-0 left-0 h-full bg-[#5236c3] border-2 border-gray-600 items-center justify-center w-24 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full', 'transition duration-100 ease-in-out'}`}>
@@ -29,7 +32,7 @@ export default function Sidebar({ isOpen, onClose }) {
                         <FontAwesomeIcon icon={faBars} className="w-7 h-auto hover:contrast-50  hover:cursor-pointer"/>
                         </button></li>
                     <li className="hover:invert hover:text-black w-32 m-2 p-3 "><a href="#home">
-                        <FontAwesomeIcon icon={faHouse} aria-hidden = "true" className="w-7 h-auto hover:contrast-50  hover:cursor-pointer pr-2"/>
+                        <FontAwesomeIcon icon={faHouse} aria-hidden = "true" className="w-7 h-auto hover:contrast-50  hover:cursor-pointer pr-2" onClick={routeHome}/>
                         </a> </li>
                     <li className="hover:invert  hover:text-black w-32 m-2 p-3"><a href="#about">
                         <FontAwesomeIcon icon={faUser} className="w-7 h-auto  hover:contrast-50 hover:cursor-pointer"/>

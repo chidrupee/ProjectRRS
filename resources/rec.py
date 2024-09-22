@@ -7,6 +7,7 @@ import json
 import re
 import spacy
 import pandas as pd
+from pathlib import Path
 
 app = Flask(__name__)
 CORS(app, resources={r"/search": {"origins": "http://localhost:3000"}})
@@ -17,18 +18,35 @@ nlp = spacy.load("en_core_web_sm")
 tfidf1 = TfidfVectorizer()
 wordvectorizer = CountVectorizer(ngram_range=(1, 2))
 
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DATA_FILE = BASE_DIR / 'resources' / 'tengen2.csv'
+TAG_FILE = BASE_DIR / 'resources' / 'tag2.json'
+NOT_FOUND_FILE = BASE_DIR / 'resources' / 'notFound.json'
+REC_FILE = BASE_DIR / 'resources' / 'rec.json'
+
 # Load data and prepare functions
 def load_data():
+
+    print(f"Tengen DataFrame Path: {DATA_FILE}")
+    print(f"Tags Path: {TAG_FILE}")
+
     global tengen_df
     global similarity_df
     global custom_keywords
     global lowered
 
     # Load DataFrame
+
     tengen_df = pd.read_csv(r'C:\SEM5\tempWorkspace\apurvinho\resources\tengen2.csv')
+    # tengen_df = pd.read_csv(DATA_FILE)
     
     # Read and process custom keywords
     custom_keywords = read_tags_json(r"C:\SEM5\tempWorkspace\apurvinho\resources\tag2.json")
+
+    # custom_keywords = read_tags_json(TAG_FILE)
+
     lowered = {
         k.lower(): [v.lower() for v in values] for k, values in custom_keywords.items()
     }
@@ -102,7 +120,7 @@ def recommend():
 
         if search_query in similarity_df.index:
             book_index = similarity_df.index.get_loc(search_query)
-            rec = similarity_df.iloc[book_index].sort_values(ascending=False)[1:20]
+            rec = similarity_df.iloc[book_index].sort_values(ascending=False)[0:20]
         else:
             tags = categorize_ngrams(search_query)
             temp = " ".join(tags)
@@ -118,6 +136,7 @@ def recommend():
             temp1 = vectorize(tengen_df_1)
 
             with open(r"C:\SEM5\tempWorkspace\apurvinho\resources\notFound.json", "w") as file:
+            # with open(NOT_FOUND_FILE, "w") as file:
                 json.dump(notfound_query, file, indent=1)
 
             similarity_df = temp1
@@ -157,6 +176,7 @@ def recommend():
 
             recommendations.sort(key=lambda x: x['Rating'], reverse=True)
             with open(r"C:\SEM5\tempWorkspace\apurvinho\resources\rec.json", "w") as recFile:
+            # with open(REC_FILE, "w") as recFile:
                 json.dump(recommendations, recFile, indent=1)
 
             return jsonify({'recommended': recommendations})

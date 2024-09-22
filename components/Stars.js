@@ -15,7 +15,7 @@ export default function Stars({rating}) {
     }
     const emptyStarCount = 5 - Math.ceil(rating);
     for(let j = 0; j < emptyStarCount; j++){
-        starCount.push(<FontAwesomeIcon key={j} icon={faRegularstar} className='text-yellow-300 h-4 w-auto'/>);
+        starCount.push(<FontAwesomeIcon key={j} icon={faRegularstar} className='text-gray-200 h-4 w-auto'/>);
     }
 
   return (

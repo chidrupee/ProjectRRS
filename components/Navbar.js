@@ -2,23 +2,27 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Sidebar from './Sidebar';
+import Filter from './Filter';
 import FontAwesome from 'react-fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faCircleUser, faFilter, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { DM_Sans } from 'next/font/google';
+
 import Card from './Card';
 
 const opensans = DM_Sans({ weight: '400', subsets: ['latin-ext'] });
-export default function Navbar({onSearch}) {
+export default function Navbar({onSearch, filterTags}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [searchValue, setSearch] = useState('search')
     const [recommended_books, setRecommendedbooks] = useState(null);
+    const [showFilter, setshowFilter] = useState(false);
+
     // Function to toggle the sidebar
 
     const handleSearch = (Event) => {
         let value = Event.target.value;
-        setSearch(Event.target.value);
+        setSearch((Event.target.value));
         console.log(Event.target.value);
 
         // Event.target.value = value;
@@ -57,6 +61,15 @@ export default function Navbar({onSearch}) {
         onSearch(searchValue);
     };
 
+    const toggleFilter = () =>{
+        // setshowFilter((prevShowFilter) => prevShowFilter != showFilter);
+        setshowFilter(!showFilter);
+        if(showFilter){
+            console.log("I was clicked");
+            // return <Filter/>;
+        }
+    }
+
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
@@ -73,7 +86,7 @@ export default function Navbar({onSearch}) {
                 <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
             </Helmet> */}
 
-           <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center bg-[#140342] text-lg `}>
+           <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center bg-[#140342] text-lg relative `}>
                 {/* <nav className={`${opensans.className} flex justify-between items-center h-20 w-full p-6 text-black bg-[#140342] text-lg`}> */}
                 <div className="openSidebar invert flex items-center">
 
@@ -101,12 +114,17 @@ export default function Navbar({onSearch}) {
                 <div className="search w-4/12 h-12 p-1 text-black border-2 border-black rounded-2xl text-center mt-0 invert justify-center" >
                     <div className="box text-black flex justify-around">
 
-                        <FontAwesomeIcon icon={faFilter} aria-hidden="true" className='h-6 p-2' />&nbsp;
+                        {(
+                        <FontAwesomeIcon icon={faFilter} aria-hidden="true" className='h-6 p-2 hover:cursor-pointer' onClick={toggleFilter}/>
+                            
+                        )}
+                      
                         <input type='text' placeholder='Search a Book...' className='outline-none bg-transparent placeholder:text-black text-sm' value={searchValue} onClick={handleResetClick} onChange={handleSearch} />
                         <button>
-                            <FontAwesomeIcon icon={faMagnifyingGlass}  className= 'p-2 h-5' onClick={handleSubmit}/>
+                            <FontAwesomeIcon icon={faMagnifyingGlass}  className= 'p-2 h-5' onClick={handleSubmit} />
                             </button>
                     </div>
+
                 </div>
                 {/* <button className="submit-btn"></button> */}
 
@@ -121,6 +139,7 @@ export default function Navbar({onSearch}) {
                         </a>
                     </ul>
                 </div>
+            {showFilter && <Filter isSet={showFilter}/>}
             </nav>
 
             {isSidebarOpen && (
@@ -129,7 +148,7 @@ export default function Navbar({onSearch}) {
 
              {/* Render Recommended Books
             <div id="recommended-books" className="flex flex-wrap justify-center gap-6 mt-10 text-black">
-                {recommended_books && recommended_books.length > 0 ? (
+            {recommended_books && recommended_books.length > 0 ? (
                     recommended_books.map((book, index) => (
                         <Card key={index} {...book} />
                     ))

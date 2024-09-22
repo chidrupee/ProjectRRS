@@ -1,154 +1,154 @@
 [
  {
-  "Title": "C And Unix - Tools For Software Design",
-  "Index": 303,
-  "Author": "Barrett M L",
-  "Count": 8,
-  "Categories": "softwareengineering, operatingsystems",
-  "Rating": 4.99
- },
- {
-  "Title": "Unix Network Programming .",
-  "Index": 445,
-  "Author": "W Richard Stevens",
+  "Title": "Java 1.2 By Example (3rd Edition)",
+  "Index": 5094,
+  "Author": "David Flanagan",
   "Count": 1,
-  "Categories": "programming, operatingsystems",
-  "Rating": 4.79
- },
- {
-  "Title": "Unix And Linux Systems",
-  "Index": 2155,
-  "Author": "Nemeth, E.",
-  "Count": 5,
-  "Categories": "operatingsystems",
-  "Rating": 4.75
- },
- {
-  "Title": "Unix System V 4",
-  "Index": 2479,
-  "Author": "Dass.",
-  "Count": 1,
-  "Categories": "operatingsystems",
-  "Rating": 4.42
- },
- {
-  "Title": "UNIX Filesystems: Evolution, Design, and Implementation (Veritas)",
-  "Index": 4430,
-  "Author": "Steve D. Pate",
-  "Count": 1,
-  "Categories": "programming, operatingsystems",
+  "Categories": "java, javascript, html, computernetworks, programming, operatingsystems",
   "Rating": 4.24
  },
  {
-  "Title": "UNIX Operating System",
-  "Index": 8174,
+  "Title": "Guide to Java",
+  "Index": 8141,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "operatingsystems",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "UNIX Unbounded: A Beginning Approach (3rd Edition)",
-  "Index": 4223,
-  "Author": "Amir Afzal",
-  "Count": 1,
-  "Categories": "operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "UNIX for Dummies Quick Reference",
-  "Index": 4439,
-  "Author": "Margaret Levine Young, John R. Levine",
-  "Count": 1,
-  "Categories": "computernetworks, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Advanced UNIX Programming (2nd Edition)",
-  "Index": 4264,
-  "Author": "Marc J. Rochkind",
-  "Count": 1,
-  "Categories": "computernetworks, programming, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Digital UNIX System Administrators Guide (HP Technologies)",
-  "Index": 4210,
-  "Author": "Matthew Cheek, Scott Fafrak, Steven Hancock, Martin Moore, Gregory Yates",
-  "Count": 1,
-  "Categories": "operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Special Edition Using Unix (3rd Edition)",
-  "Index": 6003,
-  "Author": "Shelley Powers, Jerry Peek, \"Tim OReilly\", Mike Loukides, Michael Kosta Loukides",
-  "Count": 1,
-  "Categories": "python, programming, softwareengineering, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Linux Power Tools",
-  "Index": 5809,
-  "Author": "Shelley Powers, Jerry Peek, \"Tim OReilly\", Mike Loukides, Michael Kosta Loukides",
-  "Count": 1,
-  "Categories": "python, programming, softwareengineering, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Unix Secrets",
-  "Index": 3805,
-  "Author": "James C. Armstrong, James C. Armstrong (Jr.)",
-  "Count": 1,
-  "Categories": "operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Unix for MAC OS X.",
-  "Index": 4057,
-  "Author": "Mark G. Sobell, Peter Seebach",
-  "Count": 1,
-  "Categories": "computernetworks, programming, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Advanced C/UNIX",
-  "Index": 6005,
-  "Author": "W. Richard Stevens, Stephen A. Rago",
-  "Count": 1,
-  "Categories": "programming, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Automating Linux and Unix System Administration",
-  "Index": 8375,
+  "Title": "Beginning Java",
+  "Index": 7800,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "operatingsystems",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Introduction to UNIX",
-  "Index": 6415,
-  "Author": "Jerry Peek, Grace Todino, John Strang",
+  "Title": "Pro Java",
+  "Index": 8095,
+  "Author": "unknown",
   "Count": 1,
-  "Categories": "operatingsystems",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Unix: Concepts & Application",
-  "Index": 3090,
-  "Author": "Das, S.",
-  "Count": 20,
-  "Categories": "operatingsystems",
-  "Rating": 4.21
+  "Title": "Teach Yourself Java 1.2 in 24 Hours",
+  "Index": 4573,
+  "Author": "Rogers Cadenhead",
+  "Count": 1,
+  "Categories": "java, operatingsystems",
+  "Rating": 4.24
  },
  {
-  "Title": "Advanced Programming The Unix Environment",
-  "Index": 3285,
-  "Author": "Stevens Richard W.",
-  "Count": 2,
-  "Categories": "programming, operatingsystems",
-  "Rating": 3.56
+  "Title": "Java Api Reference",
+  "Index": 4208,
+  "Author": "Colin Fraizer, Jill Bond",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Web Development with Java",
+  "Index": 7894,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Pro Java Programming",
+  "Index": 8689,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Teach Yourself Java in 21 Days (Sams Teach Yourself)",
+  "Index": 5166,
+  "Author": "Rogers Cadenhead",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Java Server Programming Java Ee 6",
+  "Index": 3097,
+  "Author": "Kogent",
+  "Count": 10,
+  "Categories": "java, programming",
+  "Rating": 2.75
+ },
+ {
+  "Title": "Embedded Java Security",
+  "Index": 7723,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Java 9 Recipes",
+  "Index": 6698,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Java Design Patterns",
+  "Index": 7086,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Industrial Strength Java",
+  "Index": 3993,
+  "Author": "Luke Cassady-Dorion",
+  "Count": 1,
+  "Categories": "java, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Securing Java: Getting Down to Business with Mobile Code, 2nd Edition",
+  "Index": 5315,
+  "Author": "Gary McGraw, Edward W. Felten",
+  "Count": 1,
+  "Categories": "java, javascript",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Beginning Java 9 Fundamentals",
+  "Index": 6799,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "java",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Java Now: The Easiest Way to Learn Java in the Least Amount of Time",
+  "Index": 4958,
+  "Author": "Kris A. Jamsa",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Killer Game Programming in Java",
+  "Index": 6436,
+  "Author": "Andrew Davison",
+  "Count": 1,
+  "Categories": "java, C++, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Taming Java Threads",
+  "Index": 4940,
+  "Author": "Allen Holub",
+  "Count": 1,
+  "Categories": "java, computernetworks",
+  "Rating": 4.24
  }
 ]

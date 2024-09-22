@@ -6,65 +6,52 @@ import BookList from "@/components/BookList";
 import Card from "@/components/Card";
 import Landing from "@/components/Landing";
 import { useRouter } from "next/navigation";
+import Loading from "../Loading";
 // import { useState } from "react";
 export default function Home() {
   const [recommended_books, setRecommendedbooks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [authLoading, setAuthLoading] = useState(false);
+  const [filterTags, setfilterTags] = useState([])
   const router = useRouter();
 
-  const handleSearch = (searchValue) => {
-    // try {
-    //   const response = await fetch('http://localhost:5000/search', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ 'query': searchValue }),
-    //   });
+  const handleSearch = async(searchValue) => {
+    try{
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a delay
+      console.log(`/search/${searchValue}`)
+      router.push(`/search/${searchValue}`);
+     
+    }
+    catch(error){
+      console.log(error);
+    }
+    finally{
+      setLoading(false);
+    }
 
-    //   const result = await response.json();
-    //   if (result && result.recommended) {
-    //     setRecommendedbooks(result.recommended);
-    //   } else {
-    //     console.error('Expected "recommended" in the response:', result);
-    //   }
-
-    //   // const searchResponse = await fetch('/search', {
-    //   //   method: 'POST',
-    //   //   headers: {
-    //   //     'Content-Type': 'application/json',
-    //   //   },
-    //   //   // body: JSON.stringify({ 'query': recommended_books }),
-    //   // });
-
-    //     // console.log(searchResponse);
-
-    //   // Redirect after handling the response
-    //   // if()
-      
-    //   // setRecommendedbooks(result['recommended']);
-      
-    //   // // const  searchResponse = await fetch('/api')
-    //   // router.push('/search');
-    // } catch (error) {
-    //   console.error('ERROR OCCURED', error);
-    // }
-    router.push(`/search/${searchValue}`);
   };
 
   useEffect(() => {
     const authenticated = sessionStorage.getItem('auth');
 
     if(!authenticated  || authenticated === 'false'){
+      // setAuthLoading(true);
       router.push('/landing');
     }
     else{
         const user = sessionStorage.getItem('activeUser');
         console.log(user);
-        alert(`Welcome ${user} `);
-        router.push('/home');
-    }
-  },[])
-  
+
+        router.replace('/home');
+      }
+    },[router])
+    
+    
+    if(loading){
+      // setLoading(false);
+      return <Loading/>;
+  }
 
   // const PageComponent = ({ recommended_books }) => {
   // useEffect(() => {
@@ -114,14 +101,10 @@ export default function Home() {
 
 
   return (
-    // <>
-    // {/* <Navbar/> */}
-    // {/* <Landing/> */}
-    // </>
-    // <div className="container">
+
     <>
     
-      <Navbar onSearch={handleSearch} />
+      <Navbar onSearch={handleSearch} filterTags={filterTags} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
