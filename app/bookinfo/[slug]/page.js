@@ -1,0 +1,74 @@
+"use client"
+import BookList from '@/components/BookList';
+import Stars from '@/components/Stars';
+import Navbar from '@/components/Navbar';
+import { useEffect, useState } from 'react';
+import { Quicksand, Work_Sans } from 'next/font/google';
+import { useRouter } from 'next/navigation';
+import Loading from '@/app/Loading';
+import { resolve } from 'styled-jsx/css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import BookDetail from '@/components/BookDetail';
+const workSans = Work_Sans({ weight: "500", subsets: ["latin"] })
+
+export default function bookinfo({ params }) {
+    const [book_info, setbookInfo] = useState({});
+    const [infoAvailable, setInfoAvailable] = useState(true);
+    const [loading, setLoading] = useState(true);
+    const { slug } = params;
+    const router = useRouter();
+
+
+    useEffect(() => {
+        async function getInfo() {
+            const response = await fetch('/api/info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ infoQuery: decodeURIComponent(slug) }),
+            });
+            const result = await response.json();
+            // console.log(result);
+            if (result.success) {
+                setbookInfo(result.info);
+            }
+            else {
+                console.error('Error fetching from API');
+            }
+
+        }
+        try {
+            console.log(`Reached bookinfo Page : ${decodeURIComponent(slug)}`)
+            getInfo();
+
+        }
+        catch (error) {
+            console.log(error);
+        }
+        finally {
+            setLoading(false);
+        }
+    }, [slug])
+
+
+    useEffect(() => {
+        // console.log("Book Info : ", JSON.parse(JSON.stringify(book_info)));
+        // console.log(infoAvailable);
+        setInfoAvailable(true);
+    }, [book_info])
+
+
+
+    return (
+        <>
+            <div className="info-container text-black">
+                {(infoAvailable && <BookDetail books={book_info} />
+
+                )}
+            </div>
+        </>
+
+    );
+
+}
