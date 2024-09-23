@@ -1,5 +1,8 @@
+// "use client"
 import localFont from "next/font/local";
 import "./globals.css";
+// import Navbar from "@/components/Navbar";
+// import { useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,11 +21,24 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
+  // const [searchValue, setSearch] = useState('search');
+  // const handleSearch = (Event) => {
+  //       let value = Event.target.value;
+  //       setSearch((Event.target.value));
+  //       console.log(Event.target.value);
+
+  //       // Event.target.value = value;
+
+  //       console.log('SearchValue: ', searchValue);
+
+  //   };
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <Navbar onSearch={handleSearch}/> */}
         {children}
       </body>
     </html>

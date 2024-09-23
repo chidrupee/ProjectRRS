@@ -1,154 +1,154 @@
 [
  {
-  "Title": "Database Theory ",
-  "Index": 8312,
+  "Title": "Java 1.2 By Example (3rd Edition)",
+  "Index": 5094,
+  "Author": "David Flanagan",
+  "Count": 1,
+  "Categories": "java, javascript, html, computernetworks, programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Guide to Java",
+  "Index": 8141,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Database Programming Languages",
-  "Index": 7310,
+  "Title": "Beginning Java",
+  "Index": 7800,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "programming, database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Beginning Database Design",
-  "Index": 7937,
+  "Title": "Pro Java",
+  "Index": 8095,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Database Theory and Application",
-  "Index": 7477,
+  "Title": "Teach Yourself Java 1.2 in 24 Hours",
+  "Index": 4573,
+  "Author": "Rogers Cadenhead",
+  "Count": 1,
+  "Categories": "java, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Java Api Reference",
+  "Index": 4208,
+  "Author": "Colin Fraizer, Jill Bond",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Web Development with Java",
+  "Index": 7894,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Database Systems for Advanced Applications",
-  "Index": 6528,
+  "Title": "Pro Java Programming",
+  "Index": 8689,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Relational Database Programming",
-  "Index": 7078,
+  "Title": "Teach Yourself Java in 21 Days (Sams Teach Yourself)",
+  "Index": 5166,
+  "Author": "Rogers Cadenhead",
+  "Count": 1,
+  "Categories": "java, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Embedded Java Security",
+  "Index": 7723,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "programming, database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Database and Expert Systems Applications",
-  "Index": 6604,
+  "Title": "Java 9 Recipes",
+  "Index": 6698,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Handbook of Database Security",
-  "Index": 8571,
+  "Title": "Java Design Patterns",
+  "Index": 7086,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Database and XML Technologies",
-  "Index": 7346,
+  "Title": "Industrial Strength Java",
+  "Index": 3993,
+  "Author": "Luke Cassady-Dorion",
+  "Count": 1,
+  "Categories": "java, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Securing Java: Getting Down to Business with Mobile Code, 2nd Edition",
+  "Index": 5315,
+  "Author": "Gary McGraw, Edward W. Felten",
+  "Count": 1,
+  "Categories": "java, javascript",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Beginning Java 9 Fundamentals",
+  "Index": 6799,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java",
   "Rating": 4.24
  },
  {
-  "Title": "Intelligent Information and Database Systems",
-  "Index": 6581,
-  "Author": "unknown",
+  "Title": "Java Now: The Easiest Way to Learn Java in the Least Amount of Time",
+  "Index": 4958,
+  "Author": "Kris A. Jamsa",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Database Design and Development: An Essential Guide for IT Professionals",
-  "Index": 6321,
-  "Author": "Paulraj Ponniah",
+  "Title": "Killer Game Programming in Java",
+  "Index": 6436,
+  "Author": "Andrew Davison",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java, C++, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Expert Oracle Database Architecture",
-  "Index": 8707,
-  "Author": "unknown",
+  "Title": "Taming Java Threads",
+  "Index": 4940,
+  "Author": "Allen Holub",
   "Count": 1,
-  "Categories": "database",
+  "Categories": "java, computernetworks",
   "Rating": 4.24
  },
  {
-  "Title": "Introduction To: Database Systems",
-  "Index": 3049,
-  "Author": "Date, C.J.",
-  "Count": 5,
-  "Categories": "database",
-  "Rating": 4.88
- },
- {
-  "Title": "An Introduction to Database Systems (v. 1)",
-  "Index": 5006,
-  "Author": "Hector Garcia-Molina, Jeffrey D. Ullman, Jennifer Widom",
-  "Count": 1,
-  "Categories": "programming, database",
-  "Rating": 4.24
- },
- {
-  "Title": "Encyclopedia of Database Systems",
-  "Index": 8814,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Secrets of the Oracle Database",
-  "Index": 8378,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Oracle Database 11g",
-  "Index": 8596,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "An Introduction to Database Systems",
-  "Index": 4087,
-  "Author": "C. J. Date, C. J.. Date",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
- },
- {
-  "Title": "Applied Mathematics for Database Professionals",
-  "Index": 8204,
-  "Author": "unknown",
-  "Count": 1,
-  "Categories": "database",
-  "Rating": 4.24
+  "Title": "Java Server Programming Java Ee 6",
+  "Index": 3097,
+  "Author": "Kogent",
+  "Count": 10,
+  "Categories": "java, programming",
+  "Rating": 2.75
  }
 ]

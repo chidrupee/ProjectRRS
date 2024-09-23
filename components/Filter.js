@@ -1,56 +1,73 @@
 import React from 'react'
 import { Work_Sans } from 'next/font/google'
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const workSans = Work_Sans({ weight: "400", subsets: ["latin"] });
-export default function Filter({ isSet }) {
+export default function Filter({ isSet, onTagsChange }) {
 
-const tagRef = useRef(null);
-const [preferences, setPreferences] = useState([]);
-const tags = [
-  "Python",
-  "Java",
-  "C++",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "R",
-  "C",
-  "C#",
-  "Rust",
-  "TypeScript",
-  "Ruby",
-  "Computernetworks",
-  "Programming",
-  "MachineLearning",
-  "DataScience",
-  "SoftwareEngineering",
-  "WebDevelopment",
-  "Database",
-  "Cybersecurity",
-  "CloudComputing",
-  "OperatingSystems",
-  "DataStructuresAlgorithms",
-  "IoT",
-  "ComputerArchitectures",
-  "Microprocessors"];
+  const tagRef = useRef(null);
+  const [preferences, setPreferences] = useState([]);
+  const tags = [
+    "Python",
+    "Java",
+    "C++",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "R",
+    "C",
+    "C#",
+    "Rust",
+    "TypeScript",
+    "Ruby",
+    "Computernetworks",
+    "Programming",
+    "MachineLearning",
+    "DataScience",
+    "SoftwareEngineering",
+    "WebDevelopment",
+    "Database",
+    "Cybersecurity",
+    "CloudComputing",
+    "OperatingSystems",
+    "DataStructuresAlgorithms",
+    "IoT",
+    "ComputerArchitectures",
+    "Microprocessors"];
 
 
   const handleTagSelection = (tag, index) => {
-        const tagElement = document.getElementById(`tag-${index}`);
-        setPreferences((prev) => {
-            if (prev.includes(tag)) {
-                tagElement.style.background = "#eef4ed";
-                tagElement.style.color = "black";
-                return prev.filter((eachTag) => eachTag !== tag);
-            }
-            else {
-                tagElement.style.background = "green";
-                tagElement.style.color = "white";
-                return [...prev, tag];
-            }
-        })
+    const tagElement = document.getElementById(`tag-${index}`);
+    setPreferences((prev) => {
+      if (prev.includes(tag)) {
+        tagElement.style.background = "#eef4ed";
+        tagElement.style.color = "black";
+        const updatedPreferences =  prev.filter((eachTag) => eachTag !== 
+        tag);
+        // onTagsChange(updatedPreferences);
+        return updatedPreferences;
+
       }
+      else {
+        tagElement.style.background = "green";
+        tagElement.style.color = "white";
+        const updatedPreferences=  [...prev, tag];
+        // onTagsChange(updatedPreferences);
+        return updatedPreferences;
+      }
+    })
+  }
+
+  useEffect(() => {
+    onTagsChange(preferences);
+    console.log('Printing Preferences from Filter useEffect: ');
+    // preferences.map((tag,index)=>{
+    //   console.log(tag, index);
+    // })
+  }, [preferences, onTagsChange])
+  
+
+  
   return (
     <div className='text-black text-xl absolute flex flex-col justify-between gap-2 top-[100%] left-[35%] shadow-md mt-4 bg-[#00b3a7] opacity-75 h-fit p-4'
     >
@@ -59,11 +76,11 @@ const tags = [
         <ul className='flex flex-wrap gap-4 max-w-2xl w-full'>
           {tags.map((tag, index) => (
             <li key={index} className='p-2 text-black border-2 rounded  border-red hover:cursor-pointer hover:bg-black hover:text-white text-sm'
-            onClick={() => handleTagSelection(tag, index)}
-            ref={tagRef} id={`tag-${index}`}>{tag}</li>
+              onClick={() => handleTagSelection(tag, index)}
+              ref={tagRef} id={`tag-${index}`}>{tag}</li>
           ))}
         </ul>
-        </div>
+      </div>
     </div>
   );
 

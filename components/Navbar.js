@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Sidebar from './Sidebar';
 import Filter from './Filter';
@@ -8,17 +8,80 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faCircleUser, faFilter, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { DM_Sans } from 'next/font/google';
-import BookDetail from './BookDetail';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useRef } from 'react';
+import { useRouter } from 'next/navigation';
+import Loading from '@/app/Loading';
+
 
 import Card from './Card';
 
 const opensans = DM_Sans({ weight: '400', subsets: ['latin-ext'] });
-export default function Navbar({ onSearch, filterTags }) {
+export default function Navbar({onSearch  }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [searchValue, setSearch] = useState('search')
     const [recommended_books, setRecommendedbooks] = useState(null);
     const [showFilter, setshowFilter] = useState(false);
+
+    const [loading, setLoading] = useState(true);
+    // const [selectedTags, setSelectedTags] = useState([]);
+
+    const tagRef = useRef(null);
+    const [preferences, setPreferences] = useState([]);
+    const tags = [
+        "python",
+        "java",
+        "cplusplus",
+        "javaScript",
+        "html",
+        "css",
+        "R",
+        "C",
+        "C#",
+        "Rust",
+        "TypeScript",
+        "Ruby",
+        "Computernetworks",
+        "Programming",
+        "MachineLearning",
+        "DataScience",
+        "SoftwareEngineering",
+        "WebDevelopment",
+        "Database",
+        "Cybersecurity",
+        "CloudComputing",
+        "OperatingSystems",
+        "DataStructuresAlgorithms",
+        "IoT",
+        "ComputerArchitectures",
+        "Microprocessors"];
+
+    const router = useRouter();
+    const handleTagSelection = (tag, index) => {
+        const tagElement = document.getElementById(`tag-${index}`);
+        setPreferences((prev) => {
+            if (prev.includes(tag)) {
+                tagElement.style.background = "#eef4ed";
+                tagElement.style.color = "black";
+                const updatedPreferences = prev.filter((eachTag) => eachTag !==
+                    tag);
+                // onTagsChange(updatedPreferences);
+                return updatedPreferences;
+
+            }
+            else {
+                tagElement.style.background = "green";
+                tagElement.style.color = "white";
+                const updatedPreferences = [...prev, tag];
+                // onTagsChange(updatedPreferences);
+                return updatedPreferences;
+            }
+        })
+    }
+
+    // const handleTagsChange = (tags) =>{
+    //     console.log('In the navbar component triggered handleTagsChange');
+    //     setSelectedTags(tags);
+    // }
 
     // Function to toggle the sidebar
 
@@ -30,12 +93,31 @@ export default function Navbar({ onSearch, filterTags }) {
         // Event.target.value = value;
 
         console.log('SearchValue: ', searchValue);
+
+
+
+
     };
     const handleResetClick = () => {
         setSearch(''); // Reset search value to an empty string
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+
+            onSearch(searchValue);
+            // setLoading(true);
+            router.push(`/search/${decodeURIComponent(searchValue)}`);
+        }
+        catch (error) {
+            console.error(error);
+        }
+        finally {
+            // setLoading(false);
+        }
+
+
         // try {
         //     const response = await fetch('http://localhost:5000/search', {
         //         method: 'POST',
@@ -60,9 +142,10 @@ export default function Navbar({ onSearch, filterTags }) {
         // catch (error) {
         //     console.error('ERROR OCCURED', error);
         // }
-        onSearch(searchValue);
     };
-
+    // if (loading) {
+    //     return <Loading />;
+    // }
     const toggleFilter = () => {
         // setshowFilter((prevShowFilter) => prevShowFilter != showFilter);
         setshowFilter(!showFilter);
@@ -75,6 +158,42 @@ export default function Navbar({ onSearch, filterTags }) {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+
+    const filterByTags = async () => {
+        try {
+            const response = await fetch('/api/filter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+
+                },
+                body: JSON.stringify({ 'tags': preferences }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+
+
+                const searchResults = data['searchRes'];
+                console.log(searchResults);
+            }
+            else {
+                console.log(data.message);
+            }
+
+        }
+        catch (error) {
+            console.error("ERROR while fetching api/filter", error);
+        }
+    }
+
+    useEffect(() => {
+        console.log('I am in Navbar')
+        preferences.map((tag, index) => {
+            console.log(tag, index);
+        })
+    }, [preferences]);
 
     return (
         <>
@@ -141,7 +260,24 @@ export default function Navbar({ onSearch, filterTags }) {
                         </a>
                     </ul>
                 </div>
-                {showFilter && <Filter isSet={showFilter} />}
+                {/* {showFilter && <Filter isSet={showFilter} onTagsChange={handleTagsChange} />} */}
+                {showFilter &&
+
+                    <div className='text-black text-xl absolute flex flex-col justify-between gap-2 top-[100%] left-[35%] shadow-md mt-4 bg-[#eef4ed] opacity-75 h-fit p-4'
+                    >
+                        <div className="mb-3 space-y-3">
+                            <span className='text-sm font-semibold'>Filter by tags</span>
+                            <ul className='flex flex-wrap gap-4 max-w-2xl w-full'>
+                                {tags.map((tag, index) => (
+                                    <li key={index} className='p-2 text-black border-2 rounded  border-black hover:cursor-pointer hover:bg-black hover:text-white text-sm'
+                                        onClick={() => handleTagSelection(tag, index)}
+                                        ref={tagRef} id={`tag-${index}`}>{tag}</li>
+                                ))}
+                            </ul>
+                            <button className='p-2 text-black border-2 text-sm font-extrabold border-red-400 bg-white hover:bg-green-600 hover:text-white' onClick={filterByTags}> Apply Filters </button>
+                        </div>
+                    </div>
+                }
             </nav>
 
             {isSidebarOpen && (
@@ -174,3 +310,5 @@ export default function Navbar({ onSearch, filterTags }) {
         </>
     );
 }
+
+

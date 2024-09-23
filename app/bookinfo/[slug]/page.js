@@ -2,6 +2,7 @@
 import BookList from '@/components/BookList';
 import Stars from '@/components/Stars';
 import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
 import { useEffect, useState } from 'react';
 import { Quicksand, Work_Sans } from 'next/font/google';
 import { useRouter } from 'next/navigation';
@@ -62,6 +63,9 @@ export default function bookinfo({ params }) {
 
     return (
         <>
+         {/* <Navbar/> */}
+        
+         {/* <Sidebar/> */}
             <div className="info-container text-black">
                 {(infoAvailable && <BookDetail books={book_info} />
 

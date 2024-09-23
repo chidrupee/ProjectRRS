@@ -12,7 +12,8 @@ export default function Home() {
   const [recommended_books, setRecommendedbooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [authLoading, setAuthLoading] = useState(false);
-  const [filterTags, setfilterTags] = useState([])
+  const [preferences, setPreferences] = useState([]);
+  // const [filterTags, setfilterTags] = useState([])
   const router = useRouter();
 
   const handleSearch = async(searchValue) => {
@@ -104,7 +105,7 @@ export default function Home() {
 
     <>
     
-      <Navbar onSearch={handleSearch} filterTags={filterTags} />
+      <Navbar onSearch={handleSearch}/>
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
@@ -112,4 +113,6 @@ export default function Home() {
     </>
   );
 }
+
+
 

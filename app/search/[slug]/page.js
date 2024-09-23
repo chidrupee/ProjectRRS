@@ -15,6 +15,8 @@ const workSans = Work_Sans({ weight: "500", subsets: ["latin"] })
 export default function search({ params }) {
   const [recommended_books, setRecommendedbooks] = useState([])
   const [loading, setLoading] = useState(true);
+  const [tags, updateTags] = useState([]);
+
 
   const { slug } = params;
   const router = useRouter();
@@ -57,11 +59,19 @@ export default function search({ params }) {
 
   }, [slug]);
 
+  const tagsChange = (tags) =>{
+    console.log('I am in search');
+
+    updateTags(tags);
+
+    tags.map((tag, index)=>{
+      console.log(tag, index);
+    })
+  }
   const handleSearch = async (searchValue) => {
     try {
-      // await new Promise((resolve) => setTimeout(resolve, 4000));
-      // setLoading(true);
-      // console.log("Slug :", slug);
+      ///
+      setLoading(true);
 
       router.push(`/search/${searchValue}`);
     }
@@ -128,7 +138,7 @@ export default function search({ params }) {
 
   return (
     <>
-      <Navbar onSearch={handleSearch} />
+      <Navbar onSearch={handleSearch}/>
       <div className="book-stack flex flex-col justify-items-center mx-auto max-w-[80%] items-center ">
         ({recommended_books.length > 0 ? <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>Showing search results for {decodeURIComponent(slug)}</h1> : <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>No search results found for  {decodeURIComponent(slug)}</h1>})
 
@@ -170,3 +180,5 @@ export default function search({ params }) {
 
 
 // export default search
+
+

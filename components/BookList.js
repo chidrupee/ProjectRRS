@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import { Gentium_Book_Plus } from 'next/font/google';
 const gentiumBookPlus = Gentium_Book_Plus({ weight: '400', subsets: ['latin'] });
-// const books =
+const books =
   [
     {
       "Title": "Html / Xml For Beginners",
