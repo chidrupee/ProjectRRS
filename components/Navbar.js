@@ -10,13 +10,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { DM_Sans } from 'next/font/google';
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from './Navbar.module.css';
 import Loading from '@/app/Loading';
 
 
 import Card from './Card';
 
 const opensans = DM_Sans({ weight: '400', subsets: ['latin-ext'] });
-export default function Navbar({onSearch  }) {
+export default function Navbar({ onSearch }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [searchValue, setSearch] = useState('search')
     const [recommended_books, setRecommendedbooks] = useState(null);
@@ -104,6 +105,7 @@ export default function Navbar({onSearch  }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if(!searchValue.trim()) return;
         try {
 
             onSearch(searchValue);
@@ -207,7 +209,11 @@ export default function Navbar({onSearch  }) {
                 <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
             </Helmet> */}
 
-            <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center bg-[#140342] text-lg relative `}>
+            {/* <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center bg-[#140342] text-lg relative `}> */}
+            <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center  text-lg relative border-b-slate-50 border-b bg-gradient-to-l  from-[#160f29] to-[#134074]`}>
+            {/* <nav className={`${opensans.className} flex justify-between gap h-20 w-full p-6 text-black items-center  text-lg relative border-b-slate-50 border-b bg-transparent`}> */}
+
+
                 {/* <nav className={`${opensans.className} flex justify-between items-center h-20 w-full p-6 text-black bg-[#140342] text-lg`}> */}
                 <div className="openSidebar invert flex items-center">
 

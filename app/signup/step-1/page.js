@@ -91,8 +91,12 @@ function Step1() {
   }
 
   return (
-    <div className={`${workSans.className} login-container flex mx-auto bg-[#134074] justify-center items-center h-screen`}>
-      <div className="login-div shadow-lg min-h-96 min-w-96 bg-[#eef4ed]">
+    <div className={`${workSans.className} login-container flex mx-auto bg-gradient-to-br from-[#47126b] via-[#973aa8] to-[#ea698b] justify-center items-center h-screen`}>
+      {/* <div className="login-div shadow-lg min-h-96 min-w-96 bg-[#eef4ed]"> */}
+      <div className="login-div shadow-lg min-h-96 min-w-96 bg-gradient-to-br to-[#ff9ebb] from-[#f5e6e8]">
+
+
+
         <h3 className='text-black p-4 text-2xl font-bold'> Sign Up</h3>
         <form action="#" className="login flex flex-col justify-center p-4" onSubmit={validate}>
           <div className="flex items-center flex-col">
@@ -105,12 +109,19 @@ function Step1() {
 
 
             <label htmlFor="pwd" className='text-black p-2'> Password </label>
-            <input type="text" className=' p-2 text-gray-400 w-80 outline-none focus: border-2 focus-within:border-red-600 focus-within:text-black text-sm' name='sign-up' value={signUpPassword} required onChange={changeFieldPswd} ref={inputRef3} id='pwd'/>
+            <input type="text" className=' p-2 text-gray-400 w-80 outline-none focus: border-2 focus-within:border-red-600 focus-within:text-black text-sm' name='sign-up' value={signUpPassword} required onChange={changeFieldPswd} ref={inputRef3} id='pwd' />
 
           </div>
 
 
-          <button className='login-btn text-center mx-auto text-black p-2  mt-4 w-fit outline-none outline-black hover:bg-[#293241] hover:text-white' type='submit'> Sign-In </button>
+          <button className='login-btn text-center mx-auto text-black p-2  mt-4 w-fit outline-none outline-white rounded-md  hover:scale-105 hover:bg-gradient-to-tl hover:from-[#cbb2fe] hover:to-[#8187dc] hover:text-white transition-transform duration-300 ease-in-out hover:shadow-lg' type='submit'> Sign-In </button>
+          {/* <button
+            className='login-btn text-center mx-auto text-black p-2 mt-4 w-fit outline-none outline-black bg-gradient-to-r from-[#f5e6e8] to-[#d0f0c0] rounded-md shadow-md transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:text-white hover:bg-[#d0f0c0] hover:bg-opacity-75'
+            type='submit'
+          >
+            Sign-In
+          </button> */}
+
 
         </form>
       </div>

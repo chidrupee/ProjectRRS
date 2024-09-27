@@ -24,10 +24,11 @@ export default function search({ params }) {
   useEffect(() => {
     setLoading(true);
     try {
-      if (slug === 'search') {
+      if (slug === 'search' || !slug.trim()) {
         // slug = '';
-        router.push('/home');
+        router.replace('/home');
       }
+
       else {
         fetch('http://localhost:5000/search', {
           method: 'POST',
@@ -140,7 +141,7 @@ export default function search({ params }) {
     <>
       <Navbar onSearch={handleSearch}/>
       <div className="book-stack flex flex-col justify-items-center mx-auto max-w-[80%] items-center ">
-        ({recommended_books.length > 0 ? <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>Showing search results for {decodeURIComponent(slug)}</h1> : <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>No search results found for  {decodeURIComponent(slug)}</h1>})
+        {recommended_books.length > 0 ? <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>Showing search results for {decodeURIComponent(slug)}</h1> : <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>No search results found for  {decodeURIComponent(slug)}</h1>}
 
         {recommended_books.map((book) => (
           <div key={book.Index} className={`${workSans.className} book-card flex items-center justify-items-start border-2 border-white p-10 min-w-[80%] mb-[10px] shadow-lg relative transition duration-300 ease hover:translate-y-[-5px]`}>

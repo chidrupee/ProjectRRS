@@ -5,7 +5,7 @@ const qs = Quicksand({ weight: "700", subsets: ["latin"] });
 export default function Loading() {
   return(
   // You can add any UI inside Loading, including a Skeleton.
-  <div className=" justify-center text-center mx-auto p-4">
+  <div className=" justify-center text-center mx-auto p-4 bg-gradient-to-br from-[#cbc0d3] to-[#f4978e] ">
     <span className={`${qs.className} text-purple-600 font-extrabold text-2xl `}> Loading.... </span>
   </div>
   );

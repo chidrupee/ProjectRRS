@@ -58,15 +58,51 @@ export default function bookinfo({ params }) {
         // console.log(infoAvailable);
         setInfoAvailable(true);
     }, [book_info])
+    const handleClick = async () => {
+        try{
+        const obj = JSON.parse(book_info);
+        if(infoAvailable){
 
+            console.log('I am in Booklist and ', obj.Title, 'was clicked');
+            const sendobj = {
+                'Action' : 'click',
+                'Title' : obj.Title,
+                'Timestamp' : Date.now(),
+            }
+            const response = await fetch('/api/kafka-producer',{
+                method: 'POST',
+                'Content-Type' : 'application/json',
+                body : JSON.stringify({
+                    payload : sendobj,
+                    topic : 'broker',
+                }),
+
+            });
+
+            const reply = await response.json();
+            console.log('Kafka Producer connected');
+            if(reply.succes){
+                const data = await reply.text();
+                console.log(data);
+
+            }
+        }
+        else{
+            console.log('None');
+        }
+    }
+    catch(error){
+        console.error(error);
+    }
+    }
 
 
     return (
         <>
-         {/* <Navbar/> */}
-        
-         {/* <Sidebar/> */}
-            <div className="info-container text-black">
+            {/* <Navbar/> */}
+
+            {/* <Sidebar/> */}
+            <div className="info-container text-black hover:cursor-pointer" onClick={() => handleClick()}>
                 {(infoAvailable && <BookDetail books={book_info} />
 
                 )}

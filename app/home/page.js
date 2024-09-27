@@ -103,14 +103,16 @@ export default function Home() {
 
   return (
 
+    // <div className="container bg-gradient-to-br from-[#47126b] via-[#973aa8] to-[#ea698b] w-screen">
     <>
+
     
       <Navbar onSearch={handleSearch}/>
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
-    </>
+   </>
   );
 }
 

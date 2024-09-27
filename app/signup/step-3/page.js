@@ -46,12 +46,13 @@ function page() {
         const tagElement = document.getElementById(`tag-${index}`);
         setPreferences((prev) => {
             if (prev.includes(tag)) {
-                tagElement.style.background = "#eef4ed";
+                tagElement.style.background = "inherit";
                 tagElement.style.color = "black";
                 return prev.filter((eachTag) => eachTag !== tag);
             }
             else {
-                tagElement.style.background = "green";
+                // tagElement.style.background = "#006d77";
+                tagElement.style.background = "linear-gradient(to right, #02c39a, #05668d)";
                 tagElement.style.color = "white";
                 return [...prev, tag];
             }
@@ -124,8 +125,8 @@ function page() {
     }, []);
 
     return (
-        <div className={`${workSans.className} login-container flex mx-auto bg-[#134074] justify-center items-center h-screen`}>
-            <div className="login-div shadow-lg min-h-96 min-w-96 bg-[#eef4ed]">
+        <div className={`${workSans.className} login-container flex mx-auto bg-gradient-to-br from-[#47126b] via-[#973aa8] to-[#ea698b] justify-center items-center h-screen`}>
+            <div className="login-div shadow-lg min-h-96 min-w-96 bg-gradient-to-br to-[#ff9ebb] from-[#f5e6e8]">
                 <h3 className='text-black p-4 text-2xl font-bold'> Preferences </h3>
                 <h4 className='text-black p-4 text-xl font-bold'> Select 2 or more preferences </h4>
                 <form action="#" className="login flex flex-col justify-center p-4" onSubmit={submitResponse}>
@@ -138,7 +139,8 @@ function page() {
 
                     </div>
 
-                    <button className='login-btn text-center mx-auto text-black p-2  mt-8 w-fit outline-none outline-black rounded-xl hover:bg-[#293241] hover:text-white' type='submit' > Submit  </button>
+                    {/* <button className='login-btn text-center mx-auto text-black p-2  mt-8 w-fit outline-none outline-black rounded-xl hover:bg-[#293241] hover:text-white' type='submit' > Submit  </button> */}
+                <button className='login-btn text-center mx-auto text-black p-2  mt-4 w-fit outline-none outline-white rounded-md  hover:scale-105 hover:bg-gradient-to-tl hover:from-[#cbb2fe] hover:to-[#8187dc] hover:text-white transition-transform duration-300 ease-in-out hover:shadow-lg' type='submit'> Submit </button>
                 </form>
             </div>
         </div>

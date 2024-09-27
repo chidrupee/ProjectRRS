@@ -42,8 +42,8 @@ export default function BookDetail({ books }) {
   }
 
   return (
-    <div className="book-detail-container flex justify-center items-start p-[20px] bg-[#f8f9fa]">
-      <div className="book-detail-card flex min-w-[50%] min-h-[70%] max-h-[85%] bg-white rounded-md shadow-lg overflow-hidden gap-[20px] max-w-[60%]">
+    <div className="book-detail-container flex justify-center items-start p-[20px] h-screen">
+      <div className="book-detail-card flex min-w-[50%] min-h-[70%]  bg-gradient-to-l from-[#f8edeb] to-[#ebf2fa] rounded-md shadow-lg overflow-hidden gap-[20px] max-w-[60%]">
         {/* Left: Book Image and Borrow Button */}
         <div className="book-photo-container w-[40%] flex flex-col items-center text-center p-0 mt-2  relative">
           {book.Thumbnail ? <img src={bookInfo.Thumbnail} alt={bookInfo.Title} className="book-detail-image w-[50%] h-auto object-cover rounded-s-md mt-3" /> : <img src='/cpp.jpeg' alt={bookInfo.Title} className="book-detail-image w-[50%] h-auto object-cover rounded-s-md mt-3" />
@@ -51,14 +51,14 @@ export default function BookDetail({ books }) {
           }
 
           {/* Borrow Button */}
-          <button className="group borrow-button inline-flex items-center justify-center p-1 cursor-pointer rounded-md hover:bg-slate-800 mt-[20px] border-b-2 hover:border-b-2 hover:border-[#f76040db]">
-            <FontAwesomeIcon icon={faHandHolding} className='w-auto h-[25px] mr-[4px] p-1 group-hover:invert' />
+          <button className="group borrow-button inline-flex items-center justify-center p-1 cursor-pointer rounded-md hover: bg-gradient-to-br hover:from-[#9b56df] hover:to-[#e9469d] hover:text-white transition-all duration-200 mt-[20px] border-b-2">
+            <FontAwesomeIcon icon={faHandHolding} className='w-auto h-[25px] mr-[4px] p-1 ' />
             {/* <img
               src="/borrow.png" // Replace with actual icon path
               alt="Borrow Icon"
               className="borrow-icon"
             /> */}
-            <span className='mt-3 text-lg p-1 group-hover:invert'> Borrow </span>
+            <span className='mt-3 text-lg p-1 group-hover:text-white'> Borrow </span>
           </button>
         </div>
 
@@ -101,7 +101,11 @@ export default function BookDetail({ books }) {
             value={newReview}
             onChange={(e) => setNewReview(e.target.value)}
           />
-          <button onClick={handleAddReview} className="submit-review-button text-white mt-[10px] bg-[#2368b2f3] p-2 border-none rounded cursor-pointer hover:bg-[#f76060fb]">Submit Review</button>
+          <button onClick={handleAddReview} className="submit-review-button text-black mt-[10px] bg-inherit p-2 border-2 border-gray-350 rounded cursor-pointer hover:bg-gradient-to-br hover:from-[#7f00ff] hover:to-[#ff6a88] hover:text-white hover:border-none transition-all duration-200">Submit Review</button>
+          {/* <button
+            // className="submit text-white mt-[10px] bg-[#2368b2f3] p-2 border-none rounded bg-gradient-to-r from-[#160f29] to-[#134074] flex items-center gap-2 transform hover:scale-105 hover:from-[#134074] hover:to-[#160f29] transition-transform duration-300 ease-in-out hover:shadow-lg text-center"
+            onClick={handleAddReview}
+          >Submit Review</button> */}
 
           <h1 className='reviews mt-[30px] text-black text-[18px] font-bold'>Reviews</h1>
           <ul className="review-list list-none p-0 mt-[20px] text-[#171717]">

@@ -1,4 +1,3 @@
-// const { Kafka } = require('kafkajs');
 import { Kafka } from 'kafkajs';
 import { MongoClient } from 'mongodb';
 
@@ -29,7 +28,7 @@ const run = async () => {
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
       const value = message.value.toString(); // Convert buffer to string
-      const result = await collection.insertOne(value);
+      const result = await collection.insertOne(JSON.parse(value));
 
       if(result){
         console.log("Document inserted", result);
