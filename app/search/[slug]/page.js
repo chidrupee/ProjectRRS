@@ -60,12 +60,12 @@ export default function search({ params }) {
 
   }, [slug]);
 
-  const tagsChange = (tags) =>{
+  const tagsChange = (tags) => {
     console.log('I am in search');
 
     updateTags(tags);
 
-    tags.map((tag, index)=>{
+    tags.map((tag, index) => {
       console.log(tag, index);
     })
   }
@@ -87,45 +87,75 @@ export default function search({ params }) {
   };
 
 
-    // const logDetails = {
+  // const logDetails = {
 
-    //   action: "click",
-    //   categories: ["C++", "JAVA"],
-    //   timestamp: "today",
-    //   // ,
-    //   // routingKey : "1234",
-    // };
+  //   action: "click",
+  //   categories: ["C++", "JAVA"],
+  //   timestamp: "today",
+  //   // ,
+  //   // routingKey : "1234",
+  // };
 
 
 
-    // try {
-    //   const response = await fetch('http://localhost:15672/api/exchanges/%2f/exchange1/publish', {
-    //     method: 'POST',
-    //     mode: 'no-cors',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'Authorization': 'Basic ' + btoa("guest:guest"),
-    //     },
-    //     body: JSON.stringify({ properties: {}, payload: JSON.stringify(logDetails), routingKey: '1234', payload_encoding: "string" }),
-    //   });
+  // try {
+  //   const response = await fetch('http://localhost:15672/api/exchanges/%2f/exchange1/publish', {
+  //     method: 'POST',
+  //     mode: 'no-cors',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Authorization': 'Basic ' + btoa("guest:guest"),
+  //     },
+  //     body: JSON.stringify({ properties: {}, payload: JSON.stringify(logDetails), routingKey: '1234', payload_encoding: "string" }),
+  //   });
 
-    //   console.log("Producer Connected");
-    //   console.log(logDetails);
+  //   console.log("Producer Connected");
+  //   console.log(logDetails);
 
-    //   if (!response.ok) {
-    //     throw new Error(`HTTP error! status: ${response.status}`);
-    //   }
+  //   if (!response.ok) {
+  //     throw new Error(`HTTP error! status: ${response.status}`);
+  //   }
 
-    //   const data = await response.text();
-    //   console.log(data);
-    // } catch (error) {
-    //   console.error('Error sending log to RabbitMQ:', error);
-    // }
+  //   const data = await response.text();
+  //   console.log(data);
+  // } catch (error) {
+  //   console.error('Error sending log to RabbitMQ:', error);
+  // }
 
- 
 
-  const handleTitle = async (title, index) =>{
-    console.log(title, index);
+
+  const handleTitle = async (title, index, categories) => {
+    try {
+      console.log(title, index);
+
+      const sendObj = {
+        'Action': 'click',
+        'Title': title,
+        'Timestamp': Date.now(),
+        'User': parseInt(sessionStorage.getItem('userid'), 10),
+        'Tags' : categories,
+      }
+
+      const response = await fetch('/api/kafka-producer', {
+        method: 'POST',
+        'Content-Type': 'application/json',
+        body: JSON.stringify({
+          payload: JSON.parse(JSON.stringify(sendObj)),
+          topic: 'broker',
+        }),
+
+      });
+
+      const reply = await response.json();
+      console.log('Kafka producer log sent');
+      if (reply.success) {
+        const data = await reply.text();
+        console.log(data);
+      }
+    }
+    catch (error) {
+      console.error(error);
+    }
     router.push(`/bookinfo/${title}`)
   }
 
@@ -139,7 +169,7 @@ export default function search({ params }) {
 
   return (
     <>
-      <Navbar onSearch={handleSearch}/>
+      <Navbar onSearch={handleSearch} />
       <div className="book-stack flex flex-col justify-items-center mx-auto max-w-[80%] items-center ">
         {recommended_books.length > 0 ? <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>Showing search results for {decodeURIComponent(slug)}</h1> : <h1 className={`${workSans.className} p-4 text-black text-xl font-extrabold`}>No search results found for  {decodeURIComponent(slug)}</h1>}
 
@@ -148,7 +178,7 @@ export default function search({ params }) {
 
             <img src="/cpp.jpeg" alt={Image} className="book-image w-[100px] h-[150px] object-cover mr-[24px] " />
             <div className="book-info flex flex-col justify-between w-[100%] ">
-              <h1 className="book-title text-black text-[18px] font-bold text-ellipsis max-w-3xl hover:cursor-pointer" onClick={()=> handleTitle(book.Title, book.Index)}>Title: {book.Title}</h1>
+              <h1 className="book-title text-black text-[18px] font-bold text-ellipsis max-w-3xl hover:cursor-pointer" onClick={() => handleTitle(book.Title, book.Index, book.Categories)}>Title: {book.Title}</h1>
               <p className="book-author text-[1em] text-gray-600">Author: {book.Author}</p>
 
               <span className='text-black text-sm group-hover:text-white mb-2'><Stars rating={book.Rating} /></span>

@@ -29,6 +29,9 @@ export default function bookinfo({ params }) {
                 },
                 body: JSON.stringify({ infoQuery: decodeURIComponent(slug) }),
             });
+
+
+            console.log("The query sent was : ", decodeURIComponent(slug));
             const result = await response.json();
             // console.log(result);
             if (result.success) {
@@ -68,6 +71,8 @@ export default function bookinfo({ params }) {
                 'Action' : 'click',
                 'Title' : obj.Title,
                 'Timestamp' : Date.now(),
+                'User': parseInt(sessionStorage.getItem('userid'), 10),
+                'Tags' : obj.mycategories,
             }
             const response = await fetch('/api/kafka-producer',{
                 method: 'POST',

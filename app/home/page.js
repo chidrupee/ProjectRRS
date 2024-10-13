@@ -48,6 +48,63 @@ export default function Home() {
       }
     },[router])
     
+  useEffect(() =>{
+    const fetchData = async() =>{
+      try{
+
+        const response =  await fetch('http://localhost:5000/userinterests',{
+          method: 'POST',
+          headers: {
+            'Content-Type' : 'application/json',
+          },
+          body: JSON.stringify({'userid' : parseInt(sessionStorage.getItem('userid'), 10)})
+        });
+
+        if(!response.ok){
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        console.log('User recommender data : ', data['user_rec']);
+
+
+
+        // Calling Mongo API endpoint to fetch books for each tag
+
+        const mongoresponse = await fetch('/api/user-specific', {
+          method : 'POST',
+          headers: {
+            'Content-Type' : 'application/json',
+          },
+          body: JSON.stringify({tags : data['user_rec']}),
+        });
+
+
+        const mongodata = await mongoresponse.json();
+
+        const recommendations_b = mongodata.result;
+        setRecommendedbooks(recommendations_b);
+
+        console.log("Received response from mongo: ", recommendations_b);
+
+
+      }
+      catch(error){
+        console.error('Error fetching data: ', error);
+      }
+    }
+
+
+    fetchData();
+
+
+    const intervalId = setInterval(()=>{
+      fetchData();
+    }, 5000);
+
+
+    return () => clearInterval(intervalId);
+  }, []);
     
     if(loading){
       // setLoading(false);
@@ -108,10 +165,13 @@ export default function Home() {
 
     
       <Navbar onSearch={handleSearch}/>
+      {Object.keys(recommended_books).map(tag =>(
+        <BookList key={tag} heading={tag} books={recommended_books[tag]}></BookList>
+      ))}
+      {/* <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
       <BookList heading="Recommended" books={recommended_books} />
-      <BookList heading="Recommended" books={recommended_books} />
-      <BookList heading="Recommended" books={recommended_books} />
+      <BookList heading="Recommended" books={recommended_books} /> */}
    </>
   );
 }

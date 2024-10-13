@@ -38,6 +38,7 @@ export default function page() {
         if (result.success) {
             sessionStorage.setItem('auth', true);
             sessionStorage.setItem('activeUser', signUserName);
+            sessionStorage.setItem('userid', result.id);
             router.push('/home');
 
         }

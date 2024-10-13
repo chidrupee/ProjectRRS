@@ -158,30 +158,55 @@ const books =
     }
   ]
 
-function BookList({ heading , books}) {
+function BookList({ heading, books }) {
 
 
+  //   return (
+  //     <div className="container p-20 h-fit w-auto">
+  //       <h2 className='text-black text-2xl m-4'>{heading}</h2>
+  //       <div className={`heading ${heading} flex justify-evenly space-x-2 overflow-auto hover:cursor-pointer`} >
+  //         {
+  //           books.map((book, index) => (
+  //             const bcount = book.isKRC ? book.count : 0;
+  //             return(
+  //             <Card
+  //               key={index}
+  //               Title={book.Title}
+  //               Author={book.Author}
+  //               {book.isKRC ? Count = {book.count} : Count = 0}
+  //               Categories={book.mycategories}
+  //               Rating={book.Rating}
+  //             />
+  //           );
+  //         }
+
+  //       </div>
+
+  //     </div>
+
+  //   );
+  // }
   return (
     <div className="container p-20 h-fit w-auto">
       <h2 className='text-black text-2xl m-4'>{heading}</h2>
-      <div className={`heading ${heading} flex justify-evenly space-x-2 overflow-auto hover:cursor-pointer`} >
-        {
-          books.map((book, index) => (
+      <div className={`heading ${heading} flex justify-evenly space-x-2 overflow-auto hover:cursor-pointer`}>
+        {books.map((book) => {
+          // Calculate Count before rendering the Card
+          const count = book.isKRC ? book.count : 0;
+
+          return (
             <Card
-              key={index}
+              key={book.Title} // Use a unique identifier for the key
               Title={book.Title}
               Author={book.Author}
-              Count={book.Count}
-              Categories={book.Categories}
+              Count={count} // Pass Count as a prop
+              Categories={book.mycategories}
               Rating={book.Rating}
             />
-          ))
-        }
+          );
+        })}
       </div>
-
     </div>
-
   );
 }
-
-export default BookList;
+  export default BookList;

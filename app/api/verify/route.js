@@ -20,7 +20,7 @@ export async function POST(request) {
         if (credentials && credentials.password === password) {
     
 
-            return NextResponse.json({ success: true });
+            return NextResponse.json({ success: true , id: credentials.userid});
 
         }
         else {

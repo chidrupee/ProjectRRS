@@ -10,7 +10,7 @@ import pandas as pd
 from pathlib import Path
 
 app = Flask(__name__)
-CORS(app, resources={r"/search": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/search": {"origins": "http://localhost:3000"}, r"/userinterests" : {"origins": "http://localhost:3000"}})
 
 # Load necessary resources
 stopList = set(stopwords.words("english"))
@@ -105,6 +105,11 @@ def categorize_ngrams(text: str):
 # Run the initialization function before handling requests
 load_data()
 
+
+def normalize_df(df):
+    return df.subtract(df.mean(axis=1), axis=0)
+
+
 @app.route('/search', methods=['POST'])   
 def recommend():
     try:
@@ -186,6 +191,51 @@ def recommend():
     except Exception as e:
         print(f"Error in recommend: {e}")
         return jsonify({'message': 'An error occurred', 'error': str(e)}), 500
+
+
+@app.route('/userinterests', methods=['POST'])
+def trigger_user_recommender():
+    try:
+        data = request.get_json()
+        userID = data.get('userid')
+
+        if not userID:
+            return jsonify({'message' : data}), 400
+        
+        user_activity_df = pd.read_csv(r'C:\SEM5\tempWorkspace\apurvinho\resources\user_int.csv')
+
+        mypt = user_activity_df.pivot_table(index='newTag', columns='User', values='total', fill_value=0)
+
+        normalized_df = normalize_df(mypt)
+
+        SIMILARITY_MATRIX = cosine_similarity(normalized_df.T)
+        user_similarity_df = pd.DataFrame(SIMILARITY_MATRIX, index=mypt.columns, columns=mypt.columns )
+
+
+        # Computing top 3 tags for this user based on user interaction table
+
+        similar_users = user_similarity_df[userID].sort_values(ascending=False).index[1:]
+
+        tag_scores = normalized_df[similar_users].sum(axis=1).sort_values(ascending=False)
+
+        recommended_tags = tag_scores.head(3).index.tolist()
+
+        query = {
+            'userid' : userID,
+            'user_rec' : recommended_tags
+        }
+
+        return jsonify(query)
+    
+
+
+
+
+    except Exception as e:
+        print(f"Error in user recommender: {e}")
+        return jsonify({'message' : 'An error occured in collaborative filtering', 'error': str(e)}), 500
+    
+
 
 if __name__ == "__main__":
     print('Flask App is running')
