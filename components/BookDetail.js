@@ -16,7 +16,33 @@ export default function BookDetail({ books }) {
     { id: 1, content: 'Great book!', author: 'John Doe' },
   ]);
 
+  // async function insertComment(userid, title, comment) {
+  //     const uri = "mongodb://localhost:27017/";
+  //     const client = new MongoClient(uri);
 
+  //     try{
+  //       const database = client.db('credentials');
+  //       const commentCollection = database.collection('comments');
+
+  //       const query = {
+  //         userid : userid,
+  //         Title : title,
+  //         comment : [comment]
+  //       }
+
+  //       const insertResponse = await commentCollection.insertOne(query);
+  //       if(insertResponse){
+  //         return true;
+  //       }
+  //       else{
+  //         return false;
+  //       }
+  //     } 
+  //     catch(error){
+  //       console.error("Error in updating comments: ", error);
+  //     }
+
+  // }
   useEffect(() => {
     try {
       console.log("Books", books);
@@ -30,11 +56,37 @@ export default function BookDetail({ books }) {
     // setbookInfo(JSON.parse(books));
   }, [books])
 
-  const handleAddReview = () => {
+  const handleAddReview = async () => {
     if (newReview.trim() !== '') {
       setReviews([...reviews, { id: reviews.length + 1, content: newReview, author: sessionStorage.getItem('activeUser') }]);
       setNewReview(''); // Clear the input field after adding the review
+
+      const userid = sessionStorage.getItem('userid');
+      // const commentInserted = await insertComment(userid, bookInfo.Title, newReview);
+
+      const response = await fetch('/api/comments/', {
+        method : 'POST',
+        headers : {
+          'Content-Type' : 'application/json',
+        },
+        body : JSON.stringify({
+          userid,
+          title : bookInfo.Title,
+          comment : newReview
+        })
+      });
+
+      const data = await response.json();
+
+      if(data.success){
+        console.log("Comment added successfully");
+      }
+      else{
+        console.error("Failed to add comment");
+      }
     }
+
+    
   };
 
   if (!book) {

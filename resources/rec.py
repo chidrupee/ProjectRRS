@@ -218,8 +218,8 @@ def trigger_user_recommender():
 
         tag_scores = normalized_df[similar_users].sum(axis=1).sort_values(ascending=False)
 
-        recommended_tags = tag_scores.head(3).index.tolist()
-
+        recommended_tags = tag_scores.index.tolist()
+        recommended_tags = list(reversed(recommended_tags))
         query = {
             'userid' : userID,
             'user_rec' : recommended_tags

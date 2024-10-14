@@ -1,154 +1,154 @@
 [
  {
-  "Title": "Java 1.2 By Example (3rd Edition)",
-  "Index": 5094,
-  "Author": "David Flanagan",
+  "Title": "Python",
+  "Index": 3564,
+  "Author": "Maurice J. Thompson",
   "Count": 1,
-  "Categories": "java, javascript, html, computernetworks, programming, operatingsystems",
+  "Categories": "python, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Guide to Java",
-  "Index": 8141,
+  "Title": "Programming with Python",
+  "Index": 7061,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Beginning Java",
-  "Index": 7800,
+  "Title": "Python Pocket Reference, 2nd Edition",
+  "Index": 6434,
+  "Author": "Mark Lutz",
+  "Count": 1,
+  "Categories": "python, programming",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Beginning Python",
+  "Index": 6744,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Pro Java",
-  "Index": 8095,
+  "Title": "Python Algorithms: Mastering Basic Algorithms in the Python Language",
+  "Index": 8066,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python, datastructuresalgorithms",
   "Rating": 4.24
  },
  {
-  "Title": "Teach Yourself Java 1.2 in 24 Hours",
-  "Index": 4573,
-  "Author": "Rogers Cadenhead",
-  "Count": 1,
-  "Categories": "java, operatingsystems",
-  "Rating": 4.24
- },
- {
-  "Title": "Java Api Reference",
-  "Index": 4208,
-  "Author": "Colin Fraizer, Jill Bond",
-  "Count": 1,
-  "Categories": "java, programming",
-  "Rating": 4.24
- },
- {
-  "Title": "Web Development with Java",
-  "Index": 7894,
+  "Title": "Pro Python",
+  "Index": 8175,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Pro Java Programming",
-  "Index": 8689,
+  "Title": "Python Programming Fundamentals",
+  "Index": 7698,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java, programming",
+  "Categories": "python, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Teach Yourself Java in 21 Days (Sams Teach Yourself)",
-  "Index": 5166,
-  "Author": "Rogers Cadenhead",
+  "Title": "The Quick Python Book",
+  "Index": 4948,
+  "Author": "Naomi R. Ceder",
   "Count": 1,
-  "Categories": "java, programming",
+  "Categories": "python, programming, machinelearning, softwareengineering",
   "Rating": 4.24
  },
  {
-  "Title": "Embedded Java Security",
-  "Index": 7723,
+  "Title": "An Introduction to Python and Computer Programming",
+  "Index": 7123,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Java 9 Recipes",
-  "Index": 6698,
+  "Title": "Learn to Program with Python",
+  "Index": 7006,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Java Design Patterns",
-  "Index": 7086,
+  "Title": "Numerical Python",
+  "Index": 7241,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Industrial Strength Java",
-  "Index": 3993,
-  "Author": "Luke Cassady-Dorion",
+  "Title": "Python for Data Analysis",
+  "Index": 3457,
+  "Author": "Wes McKinney",
   "Count": 1,
-  "Categories": "java, operatingsystems",
+  "Categories": "python, datascience",
   "Rating": 4.24
  },
  {
-  "Title": "Securing Java: Getting Down to Business with Mobile Code, 2nd Edition",
-  "Index": 5315,
-  "Author": "Gary McGraw, Edward W. Felten",
+  "Title": "Python 3",
+  "Index": 3510,
+  "Author": "Johannes Ernesti",
   "Count": 1,
-  "Categories": "java, javascript",
+  "Categories": "python, programming",
   "Rating": 4.24
  },
  {
-  "Title": "Beginning Java 9 Fundamentals",
-  "Index": 6799,
+  "Title": "Python in a Nutshell",
+  "Index": 6433,
+  "Author": "Alex Martelli",
+  "Count": 1,
+  "Categories": "python, java, C++, C#, programming, operatingsystems",
+  "Rating": 4.24
+ },
+ {
+  "Title": "Python 2 and 3 Compatibility",
+  "Index": 6723,
   "Author": "unknown",
   "Count": 1,
-  "Categories": "java",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Java Now: The Easiest Way to Learn Java in the Least Amount of Time",
-  "Index": 4958,
-  "Author": "Kris A. Jamsa",
+  "Title": "The Python Workbook",
+  "Index": 7414,
+  "Author": "unknown",
   "Count": 1,
-  "Categories": "java, programming",
+  "Categories": "python",
   "Rating": 4.24
  },
  {
-  "Title": "Killer Game Programming in Java",
-  "Index": 6436,
-  "Author": "Andrew Davison",
+  "Title": "Data Structures and Algorithms with Python",
+  "Index": 7192,
+  "Author": "unknown",
   "Count": 1,
-  "Categories": "java, C++, programming",
+  "Categories": "python, datastructuresalgorithms",
   "Rating": 4.24
  },
  {
-  "Title": "Taming Java Threads",
-  "Index": 4940,
-  "Author": "Allen Holub",
+  "Title": "Python Programming Books Set: Python Programming for Beginners & Complete Guide for Python Programming",
+  "Index": 8861,
+  "Author": "unknown",
   "Count": 1,
-  "Categories": "java, computernetworks",
-  "Rating": 4.24
+  "Categories": "python, programming, datastructuresalgorithms",
+  "Rating": 4.0
  },
  {
-  "Title": "Java Server Programming Java Ee 6",
-  "Index": 3097,
-  "Author": "Kogent",
-  "Count": 10,
-  "Categories": "java, programming",
-  "Rating": 2.75
+  "Title": "Python Programming For Beginners: Quick And Easy Guide For Python Programmers",
+  "Index": 8881,
+  "Author": "unknown",
+  "Count": 1,
+  "Categories": "python, programming, datastructuresalgorithms",
+  "Rating": 3.91
  }
 ]

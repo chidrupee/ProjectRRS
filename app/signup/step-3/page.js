@@ -94,6 +94,7 @@ function page() {
             const result = await registerResponse.json();
             if (result.success) {
                 sessionStorage.setItem('auth', true);
+                sessionStorage.setItem('userid', result.userid);
                 sessionStorage.setItem('activeUser', userCred.username); // Accessing username directly
                 router.push('/home');
             } else {
